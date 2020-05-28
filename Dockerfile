@@ -1,0 +1,8 @@
+FROM scratch
+ADD sast /app/bin/run
+
+ARG SAST_ANALYZER_IMAGE_TAG
+ENV SAST_ANALYZER_IMAGE_TAG ${SAST_ANALYZER_IMAGE_TAG:-latest}
+
+ENTRYPOINT []
+CMD ["/app/bin/run"]
